@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fully Responsive Website</title>
+
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="overflow-x-hidden">
+
+    <!--! Navigation Bar -->
+    <nav class="flex justify-between items-center h-[50px] w-full px-16 fixed top-0 backdrop-blur-sm bg-transparent border-b-1 border-[#ffffff0e] z-11">
+        <div class="h-12 w-12 bg-[url('/assets/logo.png')] bg-cover cursor-pointer" onclick="gotomain()"></div>
+        <div class="cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke-width="2.5" stroke="white"
+                class="size-8">
+                <path d="M3.95 9h16.5m-16.5 6.75h16.5" />
+            </svg>
+        </div>
+    </nav>
+
+
+    <!--! Landing Page -->
+    <header class="relative min-h-screen w-full pt-[50px]">
+
+        <!--^ Background Image -->
+        <div
+            class="absolute inset-0 bg-[url(https://static.vecteezy.com/system/resources/previews/048/991/362/non_2x/handsome-male-model-in-hoodie-electric-blue-background-fashionable-portrait-reflecting-modern-urban-fashion-and-contemporary-style-free-photo.jpg)] bg-cover bg-center bg-no-repeat z-0">
+        </div>
+
+        <!--^ Dark Overlay (Behind Content) -->
+        <div class="absolute inset-0 bg-[#090824a2] z-0"></div>
+
+
+        <!--^ Main Landing Page (Ensure it's above overlay) -->
+        <section
+            class="relative flex flex-col justify-between items-center gap-6 sm:gap-0 sm:flex-row sm:items-center md:min-h-screen md:mx-8 z-10">
+            <main>
+                <h1 class="text-5xl text-white text-center font-[elephant] leading-[5rem] lg:text-left h1-xs">
+                    <span class="text-[#FF5722]">NEW COCKTAIL</span> <br> HOODIES
+                </h1>
+                <p class="my-6 mx-24 text-center text-[#ffffff] lg:text-left lg:mx-0 lg:mr-30">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, assumenda ut deleniti facere
+                    consequuntur dignissimos nemo! Architecto dolorum blanditiis obcaecati. Deserunt.
+                </p>
+                <div class="flex gap-5 justify-center lg:justify-start">
+                    <button class="bg-[#FF5722] cursor-pointer text-white px-[20px] py-[10px] rounded-xl font-bold">Shop
+                        Now</button>
+                    <button class="border-2 cursor-pointer border-[#FF5722] text-[#FF5722] font-bold px-[20px] py-[10px] rounded-xl hover:text-[#ffffff] hover:border-white hover:rounded-2xl duration-300">50%
+                        OFF</button>
+                </div>
+            </main>
+
+            <main>
+                <div
+                    class="h-75 w-75 rounded-full bg-[url('/assets/header-image.jpg')] bg-no-repeat bg-cover lg:h-85 lg:w-85">
+                </div>
+            </main>
+        </section>
+
+    </header>
+
+
+    <!--! Summer Offer Page -->
+    <section class="min-w-screen min-h-screen flex flex-col gap-6 justify-around items-center sm:flex-row lg:mx-auto custom-bg1">
+        <main>
+            <img src="https://media.istockphoto.com/id/1364631402/photo/white-hoody-and-sport-pants-on-the-perfectly-looking-young-woman-wearing-in-splendid-makeup.jpg?s=612x612&w=0&k=20&c=py9X1tz6OMnjMaf-qWLrXLF328mheajoMg_5t-nVXWk="
+                alt="Summer Sale Offer Image"
+                class="w-32 h-32 rounded-full shadow-[4px_7px_15px_rgba(85,85,85,1)] sm:h-55 sm:w-55 md:h-65 md:w-65 xl:h-75 xl:w-75">
+        </main>
+
+        <main class="flex flex-col items-center text-center gap-5 sm:text-left sm:items-start sm:gap-8">
+            <h1 class="text-2xl font-[elephant] text-[#000000] leading-15 md:text-5xl md:leading-tight lg:text-left">
+                <span class="text-[#073063]">SUMMER</span> SALE <br> OFFER
+            </h1>
+            <p class="text-[#2c2c2c] mx-7 sm:mx-0 max-w-md text-sm">Lorem Ipsum dolor sit amet, constecture adipiscing
+                elit, sed
+                do eiusmod.</p>
+            <button
+                class="bg-orange-600 w-auto px-5 py-2 rounded-full text-white text-[14px] font-[cambria] cursor-pointer md:mx-auto md:px-14 md:py-3">Learn
+                More</button>
+        </main>
+    </section>
+
+
+    <!--! Products List -->
+    <section class="min-h-screen min-w-screen bg-amber-500 py-12">
+        <div class="flex justify-center gap-4 mb-8">
+            <!-- New Arrivals Button -->
+            <button class="tab-button active px-8 py-3 rounded-full text-white font-bold bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                onclick="showCategory('new')">
+                NEW ARRIVALS
+            </button>
+
+            <!-- Top Rating Button -->
+            <button class="tab-button px-8 py-3 rounded-full text-white font-bold bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+                onclick="showCategory('top')">
+                TOP RATING
+            </button>
+
+            <!-- Best Seller Button -->
+            <button class="tab-button px-8 py-3 rounded-full text-white font-bold bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                onclick="showCategory('best')">
+                BEST SELLER
+            </button>
+        </div>
+
+        <!-- Image Grid Container -->
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- New Arrivals -->
+            <div id="new" class="category grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-white rounded-full shadow-md">
+                    <img src="/assets/h1.png" class="w-full h-64 object-contain mx-auto">
+                    <h2 class="text-center mt-4 text-xl font-semibold">Blue Hoodie</h2>
+                    <p class="text-center text-gray-600 mt-2">$52.99</p>
+                    <a href="#" class="text-blue-500 text-center block mt-4 hover:underline">View Product</a>
+                </div>
+                <div class="p-6 bg-white rounded-full shadow-md">
+                    <img src="/assets/h2.png" class="w-full h-64 object-contain mx-auto">
+                    <h2 class="text-center mt-4 text-xl font-semibold">Black Luxurious Hoodie</h2>
+                    <p class="text-center text-gray-600 mt-2">$52.99</p>
+                    <a href="#" class="text-blue-500 text-center block mt-4 hover:underline">View Product</a>
+                </div>
+                <div class="p-6 bg-white rounded-full shadow-md">
+                    <img src="/assets/h3.png" class="w-full h-64 object-contain mx-auto">
+                    <h2 class="text-center mt-4 text-xl font-semibold">White Expensive Hoodie</h2>
+                    <p class="text-center text-gray-600 mt-2">$52.99</p>
+                    <a href="#" class="text-blue-500 text-center block mt-4 hover:underline">View Product</a>
+                </div>
+            </div>
+
+            <!-- Top Rating -->
+            <div id="top" class="category grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-white rounded-full shadow-md">
+                    <img src="/assets/h4.png" class="w-full h-64 object-contain mx-auto">
+                    <h2 class="text-center mt-4 text-xl font-semibold">Luxury Hoodie</h2>
+                    <p class="text-center text-gray-600 mt-2">$59.99</p>
+                    <a href="#" class="text-blue-500 text-center block mt-4 hover:underline">View Product</a>
+                </div>
+                <div class="p-6 bg-white rounded-full shadow-md">
+                    <img src="/assets/h5.png" class="w-full h-64 object-contain mx-auto">
+                    <h2 class="text-center mt-4 text-xl font-semibold">Purple Hoodie</h2>
+                    <p class="text-center text-gray-600 mt-2">$45.99</p>
+                    <a href="#" class="text-blue-500 text-center block mt-4 hover:underline">View Product</a>
+                </div>
+                <div class="p-6 bg-white rounded-full shadow-md">
+                    <img src="/assets/h6.png" class="w-full h-64 object-contain mx-auto">
+                    <h2 class="text-center mt-4 text-xl font-semibold">White Hoodie</h2>
+                    <p class="text-center text-gray-600 mt-2">$49.99</p>
+                    <a href="#" class="text-blue-500 text-center block mt-4 hover:underline">View Product</a>
+                </div>
+            </div>
+
+            <!-- Best Seller -->
+            <div id="best" class="category grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-white rounded-full shadow-md">
+                    <img src="/assets/h7.png" class="w-full h-64 object-contain mx-auto">
+                    <h2 class="text-center mt-4 text-xl font-semibold">Limited Edition Hoodie</h2>
+                    <p class="text-center text-gray-600 mt-2">$79.99</p>
+                    <a href="#" class="text-blue-500 text-center block mt-4 hover:underline">View Product</a>
+                </div>
+                <div class="p-6 bg-white rounded-full shadow-md">
+                    <img src="/assets/h8.png" class="w-full h-64 object-contain mx-auto">
+                    <h2 class="text-center mt-4 text-xl font-semibold">Sporty Hoodie</h2>
+                    <p class="text-center text-gray-600 mt-2">$69.99</p>
+                    <a href="#" class="text-blue-500 text-center block mt-4 hover:underline">View Product</a>
+                </div>
+                <div class="p-6 bg-white rounded-full shadow-md">
+                    <img src="/assets/h9.png" class="w-full h-64 object-contain mx-auto">
+                    <h2 class="text-center mt-4 text-xl font-semibold">Classic Hoodie</h2>
+                    <p class="text-center text-gray-600 mt-2">$55.99</p>
+                    <a href="#" class="text-blue-500 text-center block mt-4 hover:underline">View Product</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
