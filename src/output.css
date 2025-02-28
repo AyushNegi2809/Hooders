@@ -1017,14 +1017,11 @@
     width: calc(var(--spacing) * 8);
     height: calc(var(--spacing) * 8);
   }
-  .h-12 {
-    height: calc(var(--spacing) * 12);
+  .h-18 {
+    height: calc(var(--spacing) * 18);
   }
   .h-25 {
     height: calc(var(--spacing) * 25);
-  }
-  .h-32 {
-    height: calc(var(--spacing) * 32);
   }
   .h-50 {
     height: calc(var(--spacing) * 50);
@@ -1035,6 +1032,12 @@
   .h-75 {
     height: calc(var(--spacing) * 75);
   }
+  .h-85 {
+    height: calc(var(--spacing) * 85);
+  }
+  .h-90 {
+    height: calc(var(--spacing) * 90);
+  }
   .h-100 {
     height: calc(var(--spacing) * 100);
   }
@@ -1043,6 +1046,9 @@
   }
   .h-auto {
     height: auto;
+  }
+  .h-full {
+    height: 100%;
   }
   .h-screen {
     height: 100vh;
@@ -1059,20 +1065,23 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
-  .w-12 {
-    width: calc(var(--spacing) * 12);
+  .w-18 {
+    width: calc(var(--spacing) * 18);
   }
   .w-25 {
     width: calc(var(--spacing) * 25);
-  }
-  .w-32 {
-    width: calc(var(--spacing) * 32);
   }
   .w-50 {
     width: calc(var(--spacing) * 50);
   }
   .w-75 {
     width: calc(var(--spacing) * 75);
+  }
+  .w-85 {
+    width: calc(var(--spacing) * 85);
+  }
+  .w-90 {
+    width: calc(var(--spacing) * 90);
   }
   .w-100 {
     width: calc(var(--spacing) * 100);
@@ -1880,9 +1889,6 @@
   }
   .bg-\[url\(\'\/assets\/header-image\.jpg\'\)\] {
     background-image: url('/assets/header-image.jpg');
-  }
-  .bg-\[url\(\'\/assets\/logo\.png\'\)\] {
-    background-image: url('/assets/logo.png');
   }
   .bg-\[url\(https\:\/\/static\.vecteezy\.com\/system\/resources\/previews\/048\/991\/362\/non_2x\/handsome-male-model-in-hoodie-electric-blue-background-fashionable-portrait-reflecting-modern-urban-fashion-and-contemporary-style-free-photo\.jpg\)\] {
     background-image: url(https://static.vecteezy.com/system/resources/previews/048/991/362/non_2x/handsome-male-model-in-hoodie-electric-blue-background-fashionable-portrait-reflecting-modern-urban-fashion-and-contemporary-style-free-photo.jpg);
@@ -3018,16 +3024,6 @@
       margin-inline: calc(var(--spacing) * 0);
     }
   }
-  .sm\:h-55 {
-    @media (width >= 40rem) {
-      height: calc(var(--spacing) * 55);
-    }
-  }
-  .sm\:w-55 {
-    @media (width >= 40rem) {
-      width: calc(var(--spacing) * 55);
-    }
-  }
   .sm\:grid-cols-2 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3271,10 +3267,6 @@ header button:last-child:focus {
   .custom-bg1 {
     padding: 20px 0;
   }
-  .custom-bg1 img {
-    height: 120px;
-    width: 120px;
-  }
   .custom-bg1 h1 {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -3294,9 +3286,6 @@ header button:last-child:focus {
   }
   .category {
     grid-template-columns: 1fr;
-  }
-  .category div {
-    padding: 10px;
   }
   .category img {
     height: 120px;
