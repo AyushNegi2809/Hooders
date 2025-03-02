@@ -7,20 +7,49 @@
     <title>Fully Responsive Website</title>
 
     <link rel="stylesheet" href="./output.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome 6 -->
+
 </head>
 
 <body class="overflow-x-hidden">
 
     <!--! Navigation Bar -->
-    <nav class="flex justify-between items-center h-[50px] w-full px-16 fixed top-0 backdrop-blur-sm bg-transparent border-b-1 border-[#ffffff0e] z-11">
-        <div class="h-18 w-18 bg-center cursor-pointer mt-2" onclick="gotomain()">
-            <img src="/assets/logo.png" alt="Hooders Logo Image" class="h-full w-full object-contain">
+    <nav class="bg-[black] backdrop-blur-sm shadow-sm h-[60px] flex items-center justify-between px-4 md:px-6 fixed w-full top-0 z-50">
+        <!-- Logo on the left -->
+        <div class="flex items-center h-full">
+            <a href="#">
+                <img src="./assets/logo.png" alt="Logo" class="h-14">
+            </a>
         </div>
-        <div class="cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke-width="2.5" stroke="white"
-                class="size-8">
-                <path d="M3.95 9h16.5m-16.5 6.75h16.5" />
-            </svg>
+
+        <!-- Search bar in the middle (hidden on mobile by default) -->
+        <div class="hidden md:flex flex-grow mx-4 max-w-md h-full items-center">
+            <div class="relative flex items-center w-full h-10">
+                <input type="text" placeholder="Search..."
+                    class="w-full h-full pl-4 pr-10 rounded-full border focus:placeholder:text-black focus:outline-none text-md bg-[#ffffffc5] backdrop-blur-sm" />
+                <button type="submit"
+                    class="absolute right-0 bg-[#ff5622] text-white h-full px-[15px] rounded-r-full cursor-pointer transition-colors">
+                    <i class="fas fa-search text-sm"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Search Icon (visible on small screens) -->
+        <div class="md:hidden flex items-center">
+            <button id="mobile-search-toggle" class="text-white transition-colors">
+                <i class="fas fa-search text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Buttons on the right -->
+        <div class="flex space-x-2 md:space-x-4 h-full items-center">
+            <button class="bg-[#FF5722] shadow-[2px_7px_13px_rgba(255, 87, 34, 0.7)] text-white px-4 py-1 cursor-pointer md:px-6 md:py-2 rounded-full hover:bg-[#ff5622ab] focus:underline transition-colors text-md">
+                Sign Up
+            </button>
+
+            <button class="bg-transparent text-white px-4 py-1 md:px-6 md:py-2 rounded-full hover:bg-[#ffffff67] cursor-pointer focus:underline transition-colors text-md">
+                Sign In
+            </button>
         </div>
     </nav>
 
